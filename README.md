@@ -302,7 +302,7 @@ Maximum clock frequency (Zero Margin) = 853.252 MHz.
 
 Now after the Migrate , DRC, LVS, GDS stage we will get final outcome as design layout.
 
-# The final Layout on Magic View is given as -  
+# The Watchdog Chip Layout on Magic View   
  ![final output](https://user-images.githubusercontent.com/55652905/176011860-88318696-d80b-41c3-809d-d5b9937fbda1.JPG)
 
 After all stages completed successfully, we have achieved the GDSII file which can be send to foundry. 
