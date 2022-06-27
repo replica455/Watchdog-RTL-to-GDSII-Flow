@@ -1,5 +1,5 @@
 # Title: 
-### Design and RTL to GDSII Flow (180nm Technology) implementation of Single Stage Watchdog Timer using Open Source EDA Tools
+### Design and implementation of Single Stage Watchdog Timer using Open Source EDA Tools and RTL to GDSII Flow in 180nm Technology
 
 
 
