@@ -18,7 +18,7 @@ When Restart = 1 then the counter is cleared and counting state is “0000”. N
 So quite obviously if a periodic high pulse is received in the Restart pin before the counter reaches to 1111 state, then the timeout will remain low logic. If due to any internal disruption in system the Restart pin fail to receive any high pulse, then counter will reach to state 1111 and timeout will go high which gives us a signal that some internal fault has occurred in the system and a protocol should be followed to overcome the fault state of the machine 
 # RTL Coding - 
 Through Xilinx ISE design suit 14.7 we completed the Verilog coding of our design and analyzed or performed the functional synthesis of our design. The Verilog code is as follows - 
-
+```
 `timescale 1s / 1s
 
 module Watchdog (output timeout, input restart , enable, clk);
@@ -105,7 +105,7 @@ end
   
 endmodule    
 
-
+```
 
 
 # The waveform can be visualized like –
@@ -116,6 +116,7 @@ Observe in between 0 to 30 sec , restart = 1 , enable = 0 then corresponding cou
 
 
 Again in between 30 to 40 sec , I made restart signal to 0 and enable still to 0 , so in this case the count again remains 0000 and timeout signal to low
+ 
  ![30 to 40 sec](https://user-images.githubusercontent.com/55652905/176010160-ca96d633-9b6d-4f9b-ab17-9dccbcdc244c.JPG)
 
 
@@ -146,7 +147,7 @@ Now its time to restart the timer, for that observe in time 215 to 235 sec we ma
 
 
 
-The overall complete waveform can be visualized like this –
+# The overall complete waveform can be visualized like this –
  ![total waveform](https://user-images.githubusercontent.com/55652905/176011011-de608ed2-141d-45a8-85c5-b5619e2ddd08.JPG)
 
 
