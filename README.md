@@ -285,7 +285,9 @@ Of course, after the routing the clock frequency will decrease.
 # Routing - tool name Qrouter
 Qrouter is a tool to generate metal layers and vias to physically connect together a netlist in a VLSI fabrication technology. It is a maze router, otherwise known as an "over-the-cell" router or "sea-of-gates" router. That is, unlike a channel router, it begins with a description of placed standard cells, usually packed together at minimum spacing, and places metal routes over the standard cells.
 After the process you can again invoke the Magic Viewer to see if the routing has been done or not
- ![after routing](https://user-images.githubusercontent.com/55652905/176011689-86bb4be9-8e40-4f18-9fa6-9e2eb157e183.JPG)
+
+![after routing](https://user-images.githubusercontent.com/55652905/176011689-86bb4be9-8e40-4f18-9fa6-9e2eb157e183.JPG)
+
 After the whole process the output port has been connected to the design and the gates are been appropriately connected.
 
 # Post Routing STA – OpenSTA
