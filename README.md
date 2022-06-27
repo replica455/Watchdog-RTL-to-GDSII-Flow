@@ -1,4 +1,5 @@
-
+# Title: 
+#### Design and RTL to GDSII Flow implementation of Single Stage Watchdog Timer with Open Source EDA Tools
 
 
 
@@ -164,7 +165,7 @@ The qflow GUI is written in python3, so it will be necessary to install python3 
 [Copyright (C) 2012 - 2016  Clifford Wolf clifford@clifford.at]      
 Yosys is an open-source framework for Verilog synthesis and verification
 Yosys reads the verilog source file or files, performs synthesis, optimizations, and writes a netlist in BLIF format. We provide the technology parameter OSU018 or 180 nm technology. The technology library file gets elaborated and gets bonded with our Verilog file to generate the Netlist file. In our case the Netlist file can be viewed like- 
- 
+``` 
  module Watchdog (restart, enable, clk, timeout);
 
 input restart;
@@ -206,9 +207,10 @@ AOI21X1 AOI21X1_5 ( .A(counter_tff3_t), .B(counter_tff3_out), .C(counter_clear),
 AND2X2 AND2X2_7 ( .A(_18_), .B(_19_), .Y(_17_) );
 DFFPOSX1 DFFPOSX1_4 ( .CLK(clk), .D(_17_), .Q(counter_tff3_out) );
 endmodule
-
+```
 All the body part of the netlist file is actually the hardware which has been mapped to our Verilog file from the standard cell library file. Such file can be also used for post synthesis verification but not been discussed in this project.
 It can be also seen from the corresponding log file the number of gates wire etc. required in our netlist 
+```
 Analyzing design hierarchy..
 Top module:  \Watchdog
 Used module:     \up_counter
@@ -259,10 +261,12 @@ $_NOR_                          4
 $_NOT_                          1
 $_OR_                           1
 $_XNOR_                         4
+```
 # Placement- tool name Graywolf 
 Graywolf is used for placement in VLSI design. It's mainly used together with qflow. It is based on some code from the early 90s and it is one of the building blocks  of  the  open  source  qflow digital design flow. Note that in our case the aspect ratio (W/L) is made 1.
 
 Corresponding to it’s log fille it can be seen some description like 
+```
 6 routing layers
 metal1: 32 vertical tracks from 0um with 1um pitch
 metal2: 57 vertical tracks from -3.2um with 0.8um pitch
@@ -270,6 +274,7 @@ metal3: 32 vertical tracks from 0um with 1um pitch
 metal4: 57 vertical tracks from -3.2um with 0.8um pitch
 metal5: 32 vertical tracks from 0um with 1um pitch
 metal6: 29 vertical tracks from -3.2um with 1.6um pitch
+```
 point to be noted from this is the 180 nm technology employs 6 metal layers.
 # Display- tool name Magic view
 After the placement we can invoke the Magic tool for visual graphics on the project till now after placement 
