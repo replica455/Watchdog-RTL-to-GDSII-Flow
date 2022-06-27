@@ -1,0 +1,12 @@
+Qflow project preparation output log Mon Jun 27 18:31:39 2022
+
+--------------------------------
+Qflow project setup
+--------------------------------
+
+Technology set to osu018
+Regenerating files for existing project Watchdog
+
+No actions specified on command line;
+creating qflow script file /home/vlsi/Desktop/Watchdog/qflow_exec.sh only.
+Uncomment lines in this file and source the file to run the flow.

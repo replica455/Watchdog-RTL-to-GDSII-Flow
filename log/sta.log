@@ -1,0 +1,248 @@
+Qflow static timing analysis logfile created on Mon Jun 27 18:31:51 IST 2022
+Running vesta static timing analysis
+vesta --long Watchdog.rtlnopwr.v /usr/local/share/qflow/tech/osu018/osu018_stdcells.lib
+----------------------------------------------
+Vesta static timing analysis tool
+for qflow 1.3.17
+(c) 2013-2018 Tim Edwards, Open Circuit Design
+----------------------------------------------
+
+Parsing library "osu018_stdcells"
+End of library at line 6141
+Parsing module "Watchdog"
+Lib read /usr/local/share/qflow/tech/osu018/osu018_stdcells.lib:  Processed 6142 lines.
+Verilog netlist read:  Processed 42 lines.
+Number of paths analyzed:  5
+
+Top 5 maximum delay paths:
+Path DFFPOSX1_1/CLK to DFFPOSX1_4/D delay 1154.51 ps
+      0.0 ps               clk:              -> DFFPOSX1_1/CLK
+    233.1 ps  counter_tff0_out: DFFPOSX1_1/Q ->   AND2X2_2/B
+    354.7 ps               _4_:   AND2X2_2/Y ->  AOI21X1_1/B
+    508.9 ps    counter_enable:  AOI21X1_1/Y ->  NAND3X1_1/A
+    660.9 ps               _7_:  NAND3X1_1/Y ->   NOR2X1_2/B
+    769.5 ps    counter_tff3_t:   NOR2X1_2/Y ->  AOI21X1_5/A
+    857.1 ps              _19_:  AOI21X1_5/Y ->   AND2X2_7/B
+    962.4 ps              _17_:   AND2X2_7/Y -> DFFPOSX1_4/D
+
+   clock skew at destination = 0
+   setup at destination = 192.142
+
+Path DFFPOSX1_1/CLK to DFFPOSX1_3/D delay 1148.14 ps
+      0.0 ps               clk:              -> DFFPOSX1_1/CLK
+    233.1 ps  counter_tff0_out: DFFPOSX1_1/Q ->   AND2X2_2/B
+    354.7 ps               _4_:   AND2X2_2/Y ->  AOI21X1_1/B
+    508.9 ps    counter_enable:  AOI21X1_1/Y ->  NAND3X1_1/A
+    660.9 ps               _7_:  NAND3X1_1/Y ->    INVX1_2/A
+    765.2 ps    counter_tff2_t:    INVX1_2/Y ->  AOI21X1_4/A
+    851.3 ps              _16_:  AOI21X1_4/Y ->   AND2X2_6/B
+    956.0 ps              _14_:   AND2X2_6/Y -> DFFPOSX1_3/D
+
+   clock skew at destination = 0
+   setup at destination = 192.153
+
+Path DFFPOSX1_1/CLK to DFFPOSX1_2/D delay 998.23 ps
+      0.0 ps               clk:              -> DFFPOSX1_1/CLK
+    233.1 ps  counter_tff0_out: DFFPOSX1_1/Q ->   AND2X2_2/B
+    354.7 ps               _4_:   AND2X2_2/Y ->  AOI21X1_1/B
+    508.9 ps    counter_enable:  AOI21X1_1/Y ->   AND2X2_3/A
+    622.9 ps    counter_tff1_t:   AND2X2_3/Y ->  AOI21X1_3/A
+    703.6 ps              _13_:  AOI21X1_3/Y ->   AND2X2_5/B
+    806.0 ps              _11_:   AND2X2_5/Y -> DFFPOSX1_2/D
+
+   clock skew at destination = 0
+   setup at destination = 192.196
+
+Path DFFPOSX1_1/CLK to DFFPOSX1_1/D delay 906.362 ps
+      0.0 ps               clk:              -> DFFPOSX1_1/CLK
+    233.1 ps  counter_tff0_out: DFFPOSX1_1/Q ->   AND2X2_2/B
+    354.7 ps               _4_:   AND2X2_2/Y ->  AOI21X1_1/B
+    508.9 ps    counter_enable:  AOI21X1_1/Y ->  AOI21X1_2/A
+    605.5 ps              _10_:  AOI21X1_2/Y ->   AND2X2_4/B
+    714.3 ps               _8_:   AND2X2_4/Y -> DFFPOSX1_1/D
+
+   clock skew at destination = 0
+   setup at destination = 192.072
+
+Path DFFPOSX1_4/CLK to output pin timeout delay 438.881 ps
+      0.0 ps               clk:              -> DFFPOSX1_4/CLK
+    226.0 ps  counter_tff3_out: DFFPOSX1_4/Q ->  NAND2X1_1/A
+    301.9 ps               _0_:  NAND2X1_1/Y ->   NOR2X1_1/A
+    361.7 ps               _5_:   NOR2X1_1/Y ->    BUFX2_1/A
+    438.9 ps           timeout:    BUFX2_1/Y -> timeout
+
+Computed maximum clock frequency (zero margin) = 866.166 MHz
+-----------------------------------------
+
+Number of paths analyzed:  5
+
+Top 5 minimum delay paths:
+Path DFFPOSX1_4/CLK to DFFPOSX1_4/D delay 298.852 ps
+      0.0 ps               clk:              -> DFFPOSX1_4/CLK
+    153.4 ps  counter_tff3_out: DFFPOSX1_4/Q ->  AOI21X1_5/B
+    223.9 ps              _19_:  AOI21X1_5/Y ->   AND2X2_7/B
+    303.6 ps              _17_:   AND2X2_7/Y -> DFFPOSX1_4/D
+
+   clock skew at destination = 0
+   hold at destination = -4.7547
+
+Path DFFPOSX1_3/CLK to DFFPOSX1_3/D delay 302.795 ps
+      0.0 ps               clk:              -> DFFPOSX1_3/CLK
+    156.9 ps  counter_tff2_out: DFFPOSX1_3/Q ->  AOI21X1_4/B
+    227.8 ps              _16_:  AOI21X1_4/Y ->   AND2X2_6/B
+    307.5 ps              _14_:   AND2X2_6/Y -> DFFPOSX1_3/D
+
+   clock skew at destination = 0
+   hold at destination = -4.75179
+
+Path DFFPOSX1_2/CLK to DFFPOSX1_2/D delay 305.366 ps
+      0.0 ps               clk:              -> DFFPOSX1_2/CLK
+    159.3 ps  counter_tff1_out: DFFPOSX1_2/Q ->  AOI21X1_3/B
+    230.3 ps              _13_:  AOI21X1_3/Y ->   AND2X2_5/B
+    310.1 ps              _11_:   AND2X2_5/Y -> DFFPOSX1_2/D
+
+   clock skew at destination = 0
+   hold at destination = -4.75007
+
+Path DFFPOSX1_1/CLK to DFFPOSX1_1/D delay 313.579 ps
+      0.0 ps               clk:              -> DFFPOSX1_1/CLK
+    166.5 ps  counter_tff0_out: DFFPOSX1_1/Q ->  AOI21X1_2/B
+    238.5 ps              _10_:  AOI21X1_2/Y ->   AND2X2_4/B
+    318.3 ps               _8_:   AND2X2_4/Y -> DFFPOSX1_1/D
+
+   clock skew at destination = 0
+   hold at destination = -4.74213
+
+Path DFFPOSX1_3/CLK to output pin timeout delay 341.942 ps
+      0.0 ps               clk:              -> DFFPOSX1_3/CLK
+    156.9 ps  counter_tff2_out: DFFPOSX1_3/Q ->  NAND2X1_1/B
+    218.5 ps               _0_:  NAND2X1_1/Y ->   NOR2X1_1/A
+    274.3 ps               _5_:   NOR2X1_1/Y ->    BUFX2_1/A
+    341.9 ps           timeout:    BUFX2_1/Y -> timeout
+
+Design meets minimum hold timing.
+-----------------------------------------
+
+Number of paths analyzed:  8
+
+Top 8 maximum delay paths:
+Path input pin enable to DFFPOSX1_4/D delay 840.968 ps
+      0.0 ps          enable:             ->    INVX1_1/A
+     63.0 ps             _2_:   INVX1_1/Y ->  AOI21X1_1/C
+    199.6 ps  counter_enable: AOI21X1_1/Y ->  NAND3X1_1/A
+    346.4 ps             _7_: NAND3X1_1/Y ->   NOR2X1_2/B
+    454.7 ps  counter_tff3_t:  NOR2X1_2/Y ->    OR2X2_5/A
+    563.0 ps            _18_:   OR2X2_5/Y ->   AND2X2_7/A
+    648.6 ps            _17_:  AND2X2_7/Y -> DFFPOSX1_4/D
+
+   setup at destination = 192.327
+
+Path input pin enable to DFFPOSX1_3/D delay 834.373 ps
+      0.0 ps          enable:             ->    INVX1_1/A
+     63.0 ps             _2_:   INVX1_1/Y ->  AOI21X1_1/C
+    199.6 ps  counter_enable: AOI21X1_1/Y ->  NAND3X1_1/A
+    346.4 ps             _7_: NAND3X1_1/Y ->    INVX1_2/A
+    450.2 ps  counter_tff2_t:   INVX1_2/Y ->    OR2X2_4/A
+    556.4 ps            _15_:   OR2X2_4/Y ->   AND2X2_6/A
+    642.0 ps            _14_:  AND2X2_6/Y -> DFFPOSX1_3/D
+
+   setup at destination = 192.327
+
+Path input pin enable to DFFPOSX1_2/D delay 724.611 ps
+      0.0 ps          enable:             ->    INVX1_1/A
+     63.0 ps             _2_:   INVX1_1/Y ->  AOI21X1_1/C
+    199.6 ps  counter_enable: AOI21X1_1/Y ->   AND2X2_3/A
+    348.7 ps  counter_tff1_t:  AND2X2_3/Y ->    OR2X2_3/A
+    446.8 ps            _12_:   OR2X2_3/Y ->   AND2X2_5/A
+    532.3 ps            _11_:  AND2X2_5/Y -> DFFPOSX1_2/D
+
+   setup at destination = 192.328
+
+Path input pin enable to DFFPOSX1_1/D delay 596.059 ps
+      0.0 ps          enable:             ->    INVX1_1/A
+     63.0 ps             _2_:   INVX1_1/Y ->  AOI21X1_1/C
+    199.6 ps  counter_enable: AOI21X1_1/Y ->    OR2X2_2/A
+    318.0 ps             _9_:   OR2X2_2/Y ->   AND2X2_4/A
+    403.7 ps             _8_:  AND2X2_4/Y -> DFFPOSX1_1/D
+
+   setup at destination = 192.327
+
+Path input pin clk to DFFPOSX1_1/CLK delay 105.118 ps
+      0.0 ps  clk:   -> DFFPOSX1_1/CLK
+
+   setup at destination = 105.118
+
+Path input pin clk to DFFPOSX1_2/CLK delay 105.118 ps
+      0.0 ps  clk:   -> DFFPOSX1_2/CLK
+
+   setup at destination = 105.118
+
+Path input pin clk to DFFPOSX1_3/CLK delay 105.118 ps
+      0.0 ps  clk:   -> DFFPOSX1_3/CLK
+
+   setup at destination = 105.118
+
+Path input pin clk to DFFPOSX1_4/CLK delay 105.118 ps
+      0.0 ps  clk:   -> DFFPOSX1_4/CLK
+
+   setup at destination = 105.118
+
+-----------------------------------------
+
+Number of paths analyzed:  8
+
+Top 8 minimum delay paths:
+Path input pin clk to DFFPOSX1_4/CLK delay 42.6302 ps
+      0.0 ps  clk:   -> DFFPOSX1_4/CLK
+
+   hold at destination = 42.6302
+
+Path input pin clk to DFFPOSX1_3/CLK delay 42.6302 ps
+      0.0 ps  clk:   -> DFFPOSX1_3/CLK
+
+   hold at destination = 42.6302
+
+Path input pin clk to DFFPOSX1_2/CLK delay 42.6302 ps
+      0.0 ps  clk:   -> DFFPOSX1_2/CLK
+
+   hold at destination = 42.6302
+
+Path input pin clk to DFFPOSX1_1/CLK delay 42.6302 ps
+      0.0 ps  clk:   -> DFFPOSX1_1/CLK
+
+   hold at destination = 42.6302
+
+Path input pin restart to DFFPOSX1_4/D delay 271.794 ps
+      0.0 ps        restart:             ->    OR2X2_1/B
+    131.5 ps  counter_clear:   OR2X2_1/Y ->  AOI21X1_5/C
+    196.2 ps           _19_: AOI21X1_5/Y ->   AND2X2_7/B
+    276.5 ps           _17_:  AND2X2_7/Y -> DFFPOSX1_4/D
+
+   hold at destination = -4.70305
+
+Path input pin restart to DFFPOSX1_3/D delay 271.794 ps
+      0.0 ps        restart:             ->    OR2X2_1/B
+    131.5 ps  counter_clear:   OR2X2_1/Y ->  AOI21X1_4/C
+    196.2 ps           _16_: AOI21X1_4/Y ->   AND2X2_6/B
+    276.5 ps           _14_:  AND2X2_6/Y -> DFFPOSX1_3/D
+
+   hold at destination = -4.70305
+
+Path input pin restart to DFFPOSX1_2/D delay 271.794 ps
+      0.0 ps        restart:             ->    OR2X2_1/B
+    131.5 ps  counter_clear:   OR2X2_1/Y ->  AOI21X1_3/C
+    196.2 ps           _13_: AOI21X1_3/Y ->   AND2X2_5/B
+    276.5 ps           _11_:  AND2X2_5/Y -> DFFPOSX1_2/D
+
+   hold at destination = -4.70305
+
+Path input pin restart to DFFPOSX1_1/D delay 271.794 ps
+      0.0 ps        restart:             ->    OR2X2_1/B
+    131.5 ps  counter_clear:   OR2X2_1/Y ->  AOI21X1_2/C
+    196.2 ps           _10_: AOI21X1_2/Y ->   AND2X2_4/B
+    276.5 ps            _8_:  AND2X2_4/Y -> DFFPOSX1_1/D
+
+   hold at destination = -4.70305
+
+-----------------------------------------
+

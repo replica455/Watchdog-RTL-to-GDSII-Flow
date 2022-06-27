@@ -1,0 +1,73 @@
+Qflow migration logfile created on Mon Jun 27 18:31:59 IST 2022
+magic -dnull -noconsole  migrate_Watchdog.tcl
+
+Magic 8.3 revision 50 - Compiled on Thu Jun 23 20:40:54 IST 2022.
+Starting magic under Tcl interpreter
+Using the terminal as the console.
+Using NULL graphics device.
+Processing system .magicrc file
+Input style lambda=0.10(p): scaleFactor=10, multiplier=1
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Contact size value ignored (using GDS generation rules).
+Loading "migrate_Watchdog.tcl" from command line.
+Root cell box:
+           width x height  (   llx,  lly  ), (   urx,  ury  )
+
+microns:    0.00 x 0.00    (  0.00,  0.00 ), (  0.00,  0.00 )
+lambda:        0 x 0       (     0,  0    ), (     0,  0    )
+Reading LEF data from file /usr/local/share/qflow/tech/osu018/osu018_stdcells.lef.
+This action cannot be undone.
+LEF read, Line 16 (Message): Unknown keyword "OBS" in LEF file; ignoring.
+LEF read, Line 17 (Message): Unknown keyword "PIN" in LEF file; ignoring.
+LEF read: Processed 2941 lines.
+Reading DEF data from file Watchdog.def.
+This action cannot be undone.
+  Processed 5 vias total.
+  Processed 45 subcell instances total.
+  Processed 6 pins total.
+  Processed 33 nets total.
+DEF read, Line 457 (Warning): Number of nets read (3) does not match the number declared (5).
+DEF read: Processed 458 lines.
+DEF Read: encountered 1 warning total.
+Generating LEF output Watchdog.lef for cell Watchdog:
+Diagnostic:  Write LEF header for cell Watchdog
+Diagnostic:  Writing LEF output for cell Watchdog
+Diagnostic:  Scale value is 0.100000
+Extracting BUFX2 into BUFX2.ext:
+Completed 100%
+Extracting NAND2X1 into NAND2X1.ext:
+Completed 100%
+Extracting NAND3X1 into NAND3X1.ext:
+Completed 100%
+Extracting AOI21X1 into AOI21X1.ext:
+Completed 100%
+Extracting NOR2X1 into NOR2X1.ext:
+Completed 100%
+Extracting FILL into FILL.ext:
+Completed 100%
+Extracting DFFPOSX1 into DFFPOSX1.ext:
+Completed 100%
+Extracting AND2X2 into AND2X2.ext:
+Completed 100%
+Extracting OR2X2 into OR2X2.ext:
+Completed 100%
+Extracting INVX1 into INVX1.ext:
+Completed 100%
+Extracting Watchdog into Watchdog.ext:
+Completed 10%
+Completed 15%
+Completed 25%
+Completed 30%
+Completed 40%
+Completed 50%
+Completed 60%
+Completed 70%
+Completed 80%
+Completed 90%
+Completed 100%
+exttospice finished.
+Migration script ended on Mon Jun 27 18:31:59 IST 2022

@@ -1,0 +1,255 @@
+Qflow route logfile created on Mon Jun 27 18:31:55 IST 2022
+qrouter -noc  -s Watchdog.cfg
+Qrouter detail maze router version 1.4.59.T
+Reading LEF data from file /usr/local/share/qflow/tech/osu018/osu018_stdcells.lef.
+LEF Read, Line 191: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 192: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 196: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 197: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 207: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 208: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 212: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 213: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 223: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 224: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 228: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 229: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 239: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 240: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 244: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 245: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 255: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 256: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 260: NOTE:  Old format VIARULE ignored.
+LEF Read, Line 261: NOTE:  Old format VIARULE ignored.
+LEF file:  Defines site core (ignored)
+LEF read: Processed 2941 lines.
+LEF Read: encountered 0 errors and 20 warnings total.
+Vertical route layer at non-minimum pitch 1.6.  Using smaller pitch 0.8, will route on 1-of-2 tracks for layer metal6.
+Reading DEF data from file Watchdog.def.
+Diagnostic: Design name: "Watchdog"
+  Processed 5 vias total.
+  Processed 45 subcell instances total.
+  Processed 6 pins total.
+  Processed 33 nets total (0 fixed).
+  Processed 2 special nets total (4 fixed).
+DEF read: Processed 284 lines.
+Output scale = microns / 100, precision 1
+No antenna cell defined!
+There are 35 nets in this design.
+*** Running stage1 routing with defaults
+Finished routing net counter.tff0.out
+Nets remaining: 34
+Finished routing net counter.tff2.out
+Nets remaining: 33
+Finished routing net counter.tff1.out
+Nets remaining: 32
+Finished routing net counter.tff3.out
+Nets remaining: 31
+Finished routing net counter.clear
+Nets remaining: 30
+Finished routing net counter.enable
+Nets remaining: 29
+Finished routing net clk
+Nets remaining: 28
+Finished routing net _2_
+Nets remaining: 27
+Finished routing net counter.tff1.t
+Nets remaining: 26
+Finished routing net _7_
+Nets remaining: 25
+Finished routing net counter.tff2.t
+Nets remaining: 24
+Finished routing net counter.tff3.t
+Nets remaining: 23
+Finished routing net _0_
+Nets remaining: 22
+Finished routing net _1_
+Nets remaining: 21
+Finished routing net _5_
+Nets remaining: 20
+Finished routing net enable
+Nets remaining: 19
+Finished routing net restart
+Nets remaining: 18
+Finished routing net _3_
+Nets remaining: 17
+Finished routing net _4_
+Nets remaining: 16
+Finished routing net timeout
+Nets remaining: 15
+Finished routing net _6_
+Nets remaining: 14
+Finished routing net _9_
+Nets remaining: 13
+Finished routing net _10_
+Nets remaining: 12
+Finished routing net _8_
+Nets remaining: 11
+Finished routing net _12_
+Nets remaining: 10
+Finished routing net _13_
+Nets remaining: 9
+Finished routing net _11_
+Nets remaining: 8
+Finished routing net _15_
+Nets remaining: 7
+Finished routing net _16_
+Nets remaining: 6
+Finished routing net _14_
+Nets remaining: 5
+Finished routing net _18_
+Nets remaining: 4
+Finished routing net _19_
+Nets remaining: 3
+Finished routing net _17_
+Nets remaining: 2
+
+----------------------------------------------
+Progress: Stage 1 total routes completed: 63
+No failed routes!
+----------------------------------------------
+*** Running stage3 routing with defaults, 1st round
+Finished routing net counter.tff0.out
+Nets remaining: 34
+Finished routing net counter.tff2.out
+Nets remaining: 33
+Finished routing net counter.tff1.out
+Nets remaining: 32
+Finished routing net counter.tff3.out
+Nets remaining: 31
+Finished routing net counter.clear
+Nets remaining: 30
+Finished routing net counter.enable
+Nets remaining: 29
+Finished routing net clk
+Nets remaining: 28
+Finished routing net _2_
+Nets remaining: 27
+Finished routing net counter.tff1.t
+Nets remaining: 26
+Finished routing net _7_
+Nets remaining: 25
+Finished routing net counter.tff2.t
+Nets remaining: 24
+Finished routing net counter.tff3.t
+Nets remaining: 23
+Finished routing net _0_
+Nets remaining: 22
+Keeping route for net _1_
+Finished routing net _5_
+Nets remaining: 20
+Finished routing net enable
+Nets remaining: 19
+Finished routing net restart
+Nets remaining: 18
+Finished routing net _3_
+Nets remaining: 17
+Finished routing net _4_
+Nets remaining: 16
+Finished routing net timeout
+Nets remaining: 15
+Keeping route for net _6_
+Keeping route for net _9_
+Finished routing net _10_
+Nets remaining: 12
+Keeping route for net _8_
+Keeping route for net _12_
+Finished routing net _13_
+Nets remaining: 9
+Finished routing net _11_
+Nets remaining: 8
+Keeping route for net _15_
+Finished routing net _16_
+Nets remaining: 6
+Finished routing net _14_
+Nets remaining: 5
+Keeping route for net _18_
+Finished routing net _19_
+Nets remaining: 3
+Finished routing net _17_
+Nets remaining: 2
+
+----------------------------------------------
+Progress: Stage 3 total routes completed: 119
+No failed routes!
+----------------------------------------------
+*** Running stage3 routing with defaults, 2nd round
+Finished routing net counter.tff0.out
+Nets remaining: 34
+Finished routing net counter.tff2.out
+Nets remaining: 33
+Finished routing net counter.tff1.out
+Nets remaining: 32
+Finished routing net counter.tff3.out
+Nets remaining: 31
+Finished routing net counter.clear
+Nets remaining: 30
+Finished routing net counter.enable
+Nets remaining: 29
+Finished routing net clk
+Nets remaining: 28
+Finished routing net _2_
+Nets remaining: 27
+Finished routing net counter.tff1.t
+Nets remaining: 26
+Finished routing net _7_
+Nets remaining: 25
+Finished routing net counter.tff2.t
+Nets remaining: 24
+Finished routing net counter.tff3.t
+Nets remaining: 23
+Finished routing net _0_
+Nets remaining: 22
+Keeping route for net _1_
+Finished routing net _5_
+Nets remaining: 20
+Finished routing net enable
+Nets remaining: 19
+Finished routing net restart
+Nets remaining: 18
+Finished routing net _3_
+Nets remaining: 17
+Finished routing net _4_
+Nets remaining: 16
+Finished routing net timeout
+Nets remaining: 15
+Keeping route for net _6_
+Keeping route for net _9_
+Finished routing net _10_
+Nets remaining: 12
+Keeping route for net _8_
+Keeping route for net _12_
+Finished routing net _13_
+Nets remaining: 9
+Finished routing net _11_
+Nets remaining: 8
+Keeping route for net _15_
+Finished routing net _16_
+Nets remaining: 6
+Finished routing net _14_
+Nets remaining: 5
+Keeping route for net _18_
+Finished routing net _19_
+Nets remaining: 3
+Finished routing net _17_
+Nets remaining: 2
+
+----------------------------------------------
+Progress: Stage 3 total routes completed: 175
+No failed routes!
+----------------------------------------------
+*** Writing DEF file Watchdog_route.def
+emit_routes():  DEF file has 33 nets and 4 specialnets.
+but qrouter wants to write 35 nets and specialnets.
+----------------------------------------------
+Final: No failed routes!
+----------------------------------------------
+*** Writing RC file Watchdog_route.rc
+Running annotate.tcl antenna.out /home/vlsi/Desktop/Watchdog/synthesis/Watchdog.rtlnopwr.v
+  /home/vlsi/Desktop/Watchdog/synthesis/Watchdog.spc /home/vlsi/Desktop/Watchdog/synthesis/Watchdog.rtlnopwr.anno.v
+  /home/vlsi/Desktop/Watchdog/synthesis/Watchdog.anno.spc  /usr/local/share/qflow/tech/osu018/osu018_stdcells.sp /home/vlsi/Desktop/Watchdog/synthesis/Watchdog_powerground
+Running annotate.tcl
+found cell FILL pinlist vdd gnd
+Done with annotate.tcl
+Router script ended on Mon Jun 27 18:31:55 IST 2022

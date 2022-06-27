@@ -1,0 +1,77 @@
+* XSpice netlist created from SPICE and liberty sources by spi2xspice.py
+*SPICE netlist created from BLIF module Watchdog by blif2BSpice
+.subckt Watchdog a_vdd a_gnd a_restart a_enable a_clk a_timeout
+ANAND2X1_1 [counter.tff3.out counter.tff2.out] _0_ d_lut_NAND2X1
+ANAND2X1_2 [counter.tff1.out counter.tff0.out] _1_ d_lut_NAND2X1
+ANOR2X1_1 [_0_ _1_] _5_ d_lut_NOR2X1
+AINVX1_1 [enable] _2_ d_lut_INVX1
+AOR2X2_1 [_2_ restart] counter.clear d_lut_OR2X2
+AAND2X2_1 [counter.tff2.out counter.tff1.out] _3_ d_lut_AND2X2
+AAND2X2_2 [counter.tff3.out counter.tff0.out] _4_ d_lut_AND2X2
+AAOI21X1_1 [_3_ _4_ _2_] counter.enable d_lut_AOI21X1
+ABUFX2_1 [_5_] timeout d_lut_BUFX2
+AAND2X2_3 [counter.enable counter.tff0.out] counter.tff1.t d_lut_AND2X2
+ANAND3X1_1 [counter.enable counter.tff0.out counter.tff1.out] _7_ d_lut_NAND3X1
+AINVX1_2 [_7_] counter.tff2.t d_lut_INVX1
+AINVX1_3 [counter.tff2.out] _6_ d_lut_INVX1
+ANOR2X1_2 [_6_ _7_] counter.tff3.t d_lut_NOR2X1
+AOR2X2_2 [counter.enable counter.tff0.out] _9_ d_lut_OR2X2
+AAOI21X1_2 [counter.enable counter.tff0.out counter.clear] _10_ d_lut_AOI21X1
+AAND2X2_4 [_9_ _10_] _8_ d_lut_AND2X2
+ADFFPOSX1_1 _8_ clk NULL NULL counter.tff0.out NULL ddflop
+AOR2X2_3 [counter.tff1.t counter.tff1.out] _12_ d_lut_OR2X2
+AAOI21X1_3 [counter.tff1.t counter.tff1.out counter.clear] _13_ d_lut_AOI21X1
+AAND2X2_5 [_12_ _13_] _11_ d_lut_AND2X2
+ADFFPOSX1_2 _11_ clk NULL NULL counter.tff1.out NULL ddflop
+AOR2X2_4 [counter.tff2.t counter.tff2.out] _15_ d_lut_OR2X2
+AAOI21X1_4 [counter.tff2.t counter.tff2.out counter.clear] _16_ d_lut_AOI21X1
+AAND2X2_6 [_15_ _16_] _14_ d_lut_AND2X2
+ADFFPOSX1_3 _14_ clk NULL NULL counter.tff2.out NULL ddflop
+AOR2X2_5 [counter.tff3.t counter.tff3.out] _18_ d_lut_OR2X2
+AAOI21X1_5 [counter.tff3.t counter.tff3.out counter.clear] _19_ d_lut_AOI21X1
+AAND2X2_7 [_18_ _19_] _17_ d_lut_AND2X2
+ADFFPOSX1_4 _17_ clk NULL NULL counter.tff3.out NULL ddflop
+
+.model todig_1v8 adc_bridge(in_high=1.2 in_low=0.6 rise_delay=1n fall_delay=1n)
+.model toana_1v8 dac_bridge(out_high=1.8 out_low=0)
+
+.model ddflop d_dff(ic=0 rise_delay=100p fall_delay=100p)
+.model dzero d_pulldown(load=500f)
+.model done d_pullup(load=500f)
+
+AA2D1 [a_vdd] [vdd] todig_1v8
+AA2D2 [a_gnd] [gnd] todig_1v8
+AA2D3 [a_restart] [restart] todig_1v8
+AA2D4 [a_enable] [enable] todig_1v8
+AA2D5 [a_clk] [clk] todig_1v8
+AD2A1 [timeout] [a_timeout] toana_1v8
+
+.ends Watchdog
+ 
+
+* NAND2X1 (!(A B))
+.model d_lut_NAND2X1 d_lut (rise_delay=100p fall_delay=100p input_load=500f
++ table_values "1110")
+* NOR2X1 (!(A+B))
+.model d_lut_NOR2X1 d_lut (rise_delay=100p fall_delay=100p input_load=500f
++ table_values "1000")
+* INVX1 (!A)
+.model d_lut_INVX1 d_lut (rise_delay=100p fall_delay=100p input_load=500f
++ table_values "10")
+* OR2X2 (A+B)
+.model d_lut_OR2X2 d_lut (rise_delay=100p fall_delay=100p input_load=500f
++ table_values "0111")
+* AND2X2 (A B)
+.model d_lut_AND2X2 d_lut (rise_delay=100p fall_delay=100p input_load=500f
++ table_values "0001")
+* AOI21X1 (!((A B)+C))
+.model d_lut_AOI21X1 d_lut (rise_delay=100p fall_delay=100p input_load=500f
++ table_values "11100000")
+* BUFX2 A
+.model d_lut_BUFX2 d_lut (rise_delay=100p fall_delay=100p input_load=500f
++ table_values "01")
+* NAND3X1 (!((A B) C))
+.model d_lut_NAND3X1 d_lut (rise_delay=100p fall_delay=100p input_load=500f
++ table_values "11111110")
+* DFFPOSX1 DS0000
+.end

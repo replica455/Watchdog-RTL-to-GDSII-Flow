@@ -1,0 +1,90 @@
+* NGSPICE file created from Watchdog.ext - technology: scmos
+
+* Black-box entry subcircuit for AND2X2 abstract view
+.subckt AND2X2 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for OR2X2 abstract view
+.subckt OR2X2 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for FILL abstract view
+.subckt FILL gnd vdd
+.ends
+
+* Black-box entry subcircuit for NAND3X1 abstract view
+.subckt NAND3X1 A B C gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for BUFX2 abstract view
+.subckt BUFX2 A gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for AOI21X1 abstract view
+.subckt AOI21X1 A B C gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for NOR2X1 abstract view
+.subckt NOR2X1 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for DFFPOSX1 abstract view
+.subckt DFFPOSX1 Q CLK D gnd vdd
+.ends
+
+* Black-box entry subcircuit for NAND2X1 abstract view
+.subckt NAND2X1 A B gnd Y vdd
+.ends
+
+* Black-box entry subcircuit for INVX1 abstract view
+.subckt INVX1 A gnd Y vdd
+.ends
+
+.subckt Watchdog vdd gnd restart enable clk timeout
+XAND2X2_5 OR2X2_3/Y AND2X2_5/B gnd AND2X2_5/Y vdd AND2X2
+XOR2X2_4 INVX1_2/Y OR2X2_4/B gnd OR2X2_4/Y vdd OR2X2
+XFILL_0_0_0 gnd vdd FILL
+XAND2X2_6 OR2X2_4/Y AND2X2_6/B gnd AND2X2_6/Y vdd AND2X2
+XFILL_0_0_1 gnd vdd FILL
+XOR2X2_5 OR2X2_5/A OR2X2_5/B gnd OR2X2_5/Y vdd OR2X2
+XAND2X2_7 OR2X2_5/Y AND2X2_7/B gnd AND2X2_7/Y vdd AND2X2
+XFILL_1_1_0 gnd vdd FILL
+XNAND3X1_1 OR2X2_2/A OR2X2_2/B OR2X2_3/B gnd INVX1_2/A vdd NAND3X1
+XFILL_1_1_1 gnd vdd FILL
+XBUFX2_1 BUFX2_1/A gnd timeout vdd BUFX2
+XAOI21X1_2 OR2X2_2/A OR2X2_2/B OR2X2_1/Y gnd AND2X2_4/B vdd AOI21X1
+XAOI21X1_1 AND2X2_1/Y AND2X2_2/Y INVX1_1/Y gnd OR2X2_2/A vdd AOI21X1
+XAOI21X1_3 OR2X2_3/A OR2X2_3/B OR2X2_1/Y gnd AND2X2_5/B vdd AOI21X1
+XNOR2X1_1 NOR2X1_1/A NOR2X1_1/B gnd BUFX2_1/A vdd NOR2X1
+XAOI21X1_4 INVX1_2/Y OR2X2_4/B OR2X2_1/Y gnd AND2X2_6/B vdd AOI21X1
+XFILL_2_0_0 gnd vdd FILL
+XNOR2X1_2 INVX1_3/Y INVX1_2/A gnd OR2X2_5/A vdd NOR2X1
+XFILL_2_0_1 gnd vdd FILL
+XFILL_1_1 gnd vdd FILL
+XAOI21X1_5 OR2X2_5/A OR2X2_5/B OR2X2_1/Y gnd AND2X2_7/B vdd AOI21X1
+XDFFPOSX1_1 OR2X2_2/B clk AND2X2_4/Y gnd vdd DFFPOSX1
+XNAND2X1_1 OR2X2_5/B OR2X2_4/B gnd NOR2X1_1/A vdd NAND2X1
+XFILL_0_1_0 gnd vdd FILL
+XDFFPOSX1_2 OR2X2_3/B clk AND2X2_5/Y gnd vdd DFFPOSX1
+XNAND2X1_2 OR2X2_3/B OR2X2_2/B gnd NOR2X1_1/B vdd NAND2X1
+XFILL_0_1_1 gnd vdd FILL
+XDFFPOSX1_3 OR2X2_4/B clk AND2X2_6/Y gnd vdd DFFPOSX1
+XDFFPOSX1_4 OR2X2_5/B clk AND2X2_7/Y gnd vdd DFFPOSX1
+XFILL_1_0_1 gnd vdd FILL
+XFILL_1_0_0 gnd vdd FILL
+XFILL_2_1_0 gnd vdd FILL
+XFILL_2_1_1 gnd vdd FILL
+XFILL_2_1 gnd vdd FILL
+XAND2X2_1 OR2X2_4/B OR2X2_3/B gnd AND2X2_1/Y vdd AND2X2
+XINVX1_1 enable gnd INVX1_1/Y vdd INVX1
+XFILL_2_2 gnd vdd FILL
+XAND2X2_2 OR2X2_5/B OR2X2_2/B gnd AND2X2_2/Y vdd AND2X2
+XINVX1_2 INVX1_2/A gnd INVX1_2/Y vdd INVX1
+XAND2X2_3 OR2X2_2/A OR2X2_2/B gnd OR2X2_3/A vdd AND2X2
+XINVX1_3 OR2X2_4/B gnd INVX1_3/Y vdd INVX1
+XOR2X2_1 INVX1_1/Y restart gnd OR2X2_1/Y vdd OR2X2
+XOR2X2_3 OR2X2_3/A OR2X2_3/B gnd OR2X2_3/Y vdd OR2X2
+XAND2X2_4 OR2X2_2/Y AND2X2_4/B gnd AND2X2_4/Y vdd AND2X2
+XOR2X2_2 OR2X2_2/A OR2X2_2/B gnd OR2X2_2/Y vdd OR2X2
+.ends
+

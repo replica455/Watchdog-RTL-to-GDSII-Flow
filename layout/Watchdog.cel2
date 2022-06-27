@@ -1,0 +1,10 @@
+padgroup input permute
+twpin_restart  nonfixed
+twpin_enable  nonfixed
+twpin_clk  nonfixed
+restrict side L
+
+padgroup output permute
+twpin_timeout  nonfixed
+restrict side R
+
