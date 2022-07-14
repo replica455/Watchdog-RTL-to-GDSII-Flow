@@ -286,7 +286,7 @@ After the placement phase we get our standard cells as mention before from netli
 # STA - tool name OpenSTA 
 OpenSTA is a gate level static timing verifier. As a stand-alone executable it can be used to verify the timing of a design using standard file formats. OpenSTA uses a TCL command interpreter to read the design, specify timing constraints and print timing reports.
 So after the placement its high time to check if our design meets the timing constraints by analyzing the Setup time violation , Hold time violation by analyzing different paths in our design. Most importantly It provides the maximum clock which can be provided or implemented in our design in our case we see –
-Maximum clock frequency (zero margin) – 866.166 MHz
+```Maximum clock frequency (zero margin) – 866.166 MHz```
 Of course, after the routing the clock frequency will decrease.
 # Routing - tool name Qrouter
 Qrouter is a tool to generate metal layers and vias to physically connect together a netlist in a VLSI fabrication technology. It is a maze router, otherwise known as an "over-the-cell" router or "sea-of-gates" router. That is, unlike a channel router, it begins with a description of placed standard cells, usually packed together at minimum spacing, and places metal routes over the standard cells.
@@ -298,7 +298,7 @@ After the whole process the output port has been connected to the design and the
 
 # Post Routing STA – OpenSTA
 After routing the clock frequency will decrease because every element gate or wire will have their own delay.
-Maximum clock frequency (Zero Margin) = 853.252 MHz.
+```Maximum clock frequency (Zero Margin) = 853.252 MHz.```
 
 Now after the Migrate , DRC, LVS, GDS stage we will get final outcome as design layout.
 
